@@ -41,6 +41,88 @@
         <br />
         <p class="signup__text">You know you want to.</p>
       </div>
+      <form action="" method="post">
+        <section class="signup__form">
+          <div class="container">
+            <h2 class="signup__title">Let's do this!</h2>
+
+            <div class="signup__inputs">
+              <div>
+                <label class="signup__label" for="first-name">first name</label>
+                <input
+                  class="signup__input"
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  minlength="3"
+                />
+              </div>
+
+              <div>
+                <label class="signup__label" for="last-name">last name</label>
+                <input
+                  class="signup__input"
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  minlength="3"
+                />
+              </div>
+
+              <div>
+                <label class="signup__label" for="email">email</label>
+                <input
+                  class="signup__input"
+                  type="email"
+                  id="email"
+                  name="user-email"
+                />
+              </div>
+
+              <div>
+                <label class="signup__label" for="phone-number"
+                  >phone number</label
+                >
+                <input
+                  class="signup__input"
+                  type="tel"
+                  id="phone-number"
+                  name="phone-number"
+                />
+              </div>
+
+              <div>
+                <label class="signup__label" for="password">password</label>
+                <input
+                  class="signup__input"
+                  type="password"
+                  id="password"
+                  name="user-password"
+                  minlength="8"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="signup__label" for="confirm-password"
+                  >confirm password</label
+                >
+                <input
+                  class="signup__input"
+                  type="password"
+                  id="confirm-password"
+                  name="comfirm-password"
+                  minlength="8"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="signup__button container">
+          <button class="button" type="button">create account</button>
+        </div>
+      </form>
     </main>
   </body>
 </html>
