@@ -1,3 +1,5 @@
+/*** CSS Reset ***/
+
 *,
 *::before,
 *::after {
@@ -16,4 +18,36 @@ textarea {
 img {
   display: block;
   max-width: 100%;
+}
+
+/*** Custom Properties ***/
+
+:root {
+  --main-background: hsl(210, 20%, 98%);
+}
+
+/*** General Styles ***/
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+/*** Image Sidebar Styles ***/
+
+.image-sidebar {
+  max-width: 530px;
+  width: 40%;
+  flex: auto;
+  height: 100%;
+  background-image: url("./images/Nature.jpg");
+  background-size: cover;
+}
+
+/*** Sign Up Styles ***/
+
+.signup {
+  width: 60%;
+  flex: auto;
+  background-color: var(--main-background);
 }
