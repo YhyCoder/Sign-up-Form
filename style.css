@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: "Roboto Light";
-  src: url("./fonts/Roboto-Light.ttf");
-}
-
-@font-face {
   font-family: "Roboto Regular";
   src: url("./fonts/Roboto-Regular.ttf");
 }
@@ -46,12 +41,11 @@ img {
   --main-background: hsl(210, 20%, 98%);
   --light-color: hsl(0, 0%, 100%);
   --credit-color: hsl(84, 19%, 72%);
-  --form-color: hsl(215, 28%, 17%);
-  --input-border-color: hsl(220, 13%, 91%);
+  --dark-text: hsl(215, 28%, 17%);
+  --input-focus-color: hsl(220, 13%, 91%);
   --error: hsl(0, 66%, 44%);
-  --button-color: hsl(92, 20%, 35%);
-  --button-hover-color: hsl(92, 20%, 45%);
-  --roboto-light: "Roboto Light", sans-serif;
+  --primary: hsl(92, 20%, 35%);
+  --primary-light: hsl(92, 20%, 45%);
   --roboto-regular: "Roboto Regular", sans-serif;
   --roboto-semi-bold: "Roboto SemiBold", sans-serif;
 }
@@ -65,17 +59,17 @@ img {
 
 .button {
   padding: 0.7em 2.5em;
-  border: 1px solid var(--button-color);
+  border: 1px solid var(--primary);
   border-radius: 5px;
   font: 1.5rem var(--roboto-semi-bold);
   text-transform: capitalize;
   cursor: pointer;
   color: var(--light-color);
-  background-color: var(--button-color);
+  background-color: var(--primary);
 }
 
 .button:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--primary-light);
 }
 
 /*** General Styles ***/
@@ -157,8 +151,13 @@ body {
   width: clamp(45ch, 55ch, 75ch);
 }
 
+.form {
+  margin-bottom: 3em;
+}
+
 .signup__form {
   padding: 2em 0 4em;
+  margin-bottom: 2em;
   margin-bottom: 3em;
   box-shadow: 0 3px 5px 1px hsla(0, 0%, 0%, 10%);
   background-color: var(--light-color);
@@ -167,7 +166,7 @@ body {
 .signup__title {
   margin-bottom: 1em;
   font: 2rem var(--roboto-semi-bold);
-  color: var(--form-color);
+  color: var(--dark-text);
 }
 
 .signup__inputs {
@@ -182,13 +181,13 @@ body {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--form-color);
+  color: var(--dark-text);
 }
 
 .signup__input {
-  width: 230px;
+  width: 270px;
   padding: 0.5em 0.5em 0.5em 1em;
-  border: 2px solid var(--input-border-color);
+  border: 2px solid var(--input-focus-color);
   outline: none;
   border-radius: 5px;
   font-size: 1.3rem;
@@ -201,4 +200,13 @@ body {
 
 .signup__input:invalid {
   border-color: var(--error);
+}
+
+.signup__account {
+  font-size: 1.4rem;
+}
+
+.login-link {
+  text-decoration: none;
+  color: var(--primary);
 }
