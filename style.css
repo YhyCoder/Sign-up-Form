@@ -3,6 +3,21 @@
   src: url("./fonts/Norse-Bold.otf");
 }
 
+@font-face {
+  font-family: "Roboto Light";
+  src: url("./fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto SemiBold";
+  src: url("./fonts/Roboto-SemiBold.ttf");
+}
+
 /*** CSS Reset ***/
 
 *,
@@ -31,6 +46,13 @@ img {
   --main-background: hsl(210, 20%, 98%);
   --brand-color: hsl(0, 0%, 100%);
   --credit-color: hsl(84, 19%, 72%);
+  --roboto-semi-bold: "Roboto SemiBold", sans-serif;
+}
+
+/*** Utility Class ***/
+
+.container {
+  padding: 0 4rem;
 }
 
 /*** General Styles ***/
@@ -48,8 +70,8 @@ body {
 
 .sidebar {
   position: relative;
-  max-width: 53em;
-  width: 40%;
+  max-width: 58em;
+  width: 50%;
   flex: auto;
   height: 100%;
   background-image: url("./images/Nature.jpg");
@@ -94,7 +116,18 @@ body {
 /*** Sign Up Styles ***/
 
 .signup {
-  width: 60%;
   flex: auto;
+  width: 55%;
+  padding: 10em 0;
   background-color: var(--main-background);
+}
+
+.signup__description {
+  font-family: var(--roboto-semi-bold);
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.signup__text {
+  width: clamp(45ch, 50ch, 75ch);
 }
